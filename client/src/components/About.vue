@@ -7,7 +7,7 @@
       <v-row class="text-h6">
         <v-col class="text-right text-center  " md="4">
           <v-avatar size="150">
-            <img src="../../public/me2.png" alt="John" />
+            <img src="../../public/profile.jpg" alt="John" />
           </v-avatar>
 
           <h4 class="pt-3">Web Developer</h4>
@@ -26,10 +26,8 @@
         </v-col>
         <v-col md="8" sm="12">
           <p>
-            I am a web developer with a 2 years of experience who creates an
-            appplication that are user friendly, reliability, maintainability,
-            flexibility, reusablity and responsive using Vue.js (Vuetify
-            Framework) and Node.js (Express.js) and the database that I used are
+            I am a web developer who have more than 2 years of experience using Vue.js, Vuetify,
+            Node.js, Express.js, REST API and the database that I used are
             MySQL, MSSQL and CouchDB.
           </p>
         </v-col>

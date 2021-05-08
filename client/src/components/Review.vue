@@ -3,19 +3,19 @@
     <v-container>
       <h2
         class="my-5 font-weight-light text-md-h3 text-sm-h4 text-center"
-        style="color:#1565c0"
+        style="color: #1565c0"
       >
         Do you have any suggestions?
       </h2>
       <v-row justify="center">
         <v-col md="4" sm="12">
-          <p class="display-1  text-center">
+          <p class="display-1 text-center">
             I would greatly appreciate your feedback !
           </p>
         </v-col>
         <v-col md="2" cols="12" align="center">
           <v-avatar size="100">
-            <img src="https://cdn.vuetifyjs.com/images/john.jpg" />
+            <img src="../../public/profile.jpg" />
           </v-avatar>
         </v-col>
       </v-row>
@@ -45,31 +45,50 @@
                   v-model="message"
                   :rules="messageRules"
                 ></v-textarea>
-                <v-btn
-                  block
-                  class="#1565c0"
-                  :loading="loading"
-                  @click="addFeedBack()"
-                  >Send</v-btn
-                >
+                <v-tooltip bottom>
+                  <template v-slot:activator="{ on, attrs }">
+                    <v-btn
+                      v-on="on"
+                      v-bind="attrs"
+                      block
+                      dark
+                      color="#1565c0"
+                      :loading="loading"
+                      @click="addFeedBack()"
+                      >Send
+                      <v-icon>mdi-firebase</v-icon>
+                    </v-btn>
+                  </template>
+                  <span>This message will be saved in firestore.</span>
+                </v-tooltip>
               </v-form>
             </v-card-text>
           </v-card>
         </v-col>
       </v-row>
+
+      <v-row justify="center" class="my-10">
+        <span class="text-h3">REVIEWS </span>
+      </v-row>
       <v-row>
         <v-col
-          v-for="item in feedbackList"
+          v-for="item in computedFeedbackList"
           :key="item.id"
           lg="3"
           md="4"
           sm="6"
           cols="12"
         >
-          <v-card height="250px" style="overflow: auto;">
-            <v-card-title>{{ item.name }}</v-card-title>
-            <v-card-subtitle>{{ item.email }}</v-card-subtitle>
-            <v-card-text>{{ item.message }} </v-card-text>
+          <v-card height="250px" style="overflow: auto">
+            <v-toolbar dense flat>
+              <span class="pr-3">Date:</span>{{ item.createddate }}
+              <v-spacer></v-spacer
+              ><v-icon color="orange">mdi-firebase</v-icon></v-toolbar
+            >
+            <hr />
+            <v-card-title class="text-h6">{{ item.name }}</v-card-title>
+            <v-card-subtitle class="text-h7">{{ item.email }}</v-card-subtitle>
+            <v-card-text class="text-h7">{{ item.message }} </v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -80,6 +99,7 @@
 <script>
 import Swal from "sweetalert2";
 import { db } from "../config/db";
+import moment from "moment";
 export default {
   data: () => ({
     firebaseConnect: db.collection("feedback"),
@@ -106,7 +126,16 @@ export default {
   },
   mounted() {},
   watch: {},
-  computed: {},
+  computed: {
+    computedFeedbackList() {
+      const sortedFeedback = [...this.feedbackList];
+      return sortedFeedback.sort(function (a, b) {
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return new Date(b.createddate) - new Date(a.createddate);
+      });
+    },
+  },
   methods: {
     getFeedBack() {
       this.firebaseConnect.onSnapshot((querySnapshot) => {
@@ -116,6 +145,7 @@ export default {
             name: doc.data().name,
             email: doc.data().email,
             message: doc.data().message,
+            createddate: doc.data().createddate,
           });
         });
       });
@@ -145,7 +175,12 @@ export default {
           timer: 750,
         });
         db.collection("feedback")
-          .add({ name: this.name, email: this.email, message: this.message })
+          .add({
+            name: this.name,
+            email: this.email,
+            message: this.message,
+            createddate: moment().format("YYYY-MM-DD hh:mm:ss"),
+          })
           .then(() => {
             this.name = this.email = this.message = "";
             console.log("Document successfully written!");

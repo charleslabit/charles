@@ -142,7 +142,7 @@ export default {
         project_date: "2021-05-01",
         client_name: "Personal project",
         project_image: require("../../public/TodoApp.png"),
-        project_url: "https://charleslabit-github-io.vercel.app/",
+        project_url: "https://todoapp-pfudmg2og-charleslabit.vercel.app/",
       },
     ],
   }),

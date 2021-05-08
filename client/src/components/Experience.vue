@@ -37,25 +37,25 @@ export default {
       {
         title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
+          "At HRD Singapore, i am employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2021",
       },
       {
         title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
+          "At HRD Singapore, i am employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2020",
       },
       {
         title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
+          "At HRD Singapore, i am employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2019",
       },
       {
         title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
+          "At HRD Singapore, i am employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2018",
       },
     ],

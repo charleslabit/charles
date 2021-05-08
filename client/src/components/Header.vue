@@ -1,30 +1,38 @@
 <template>
   <div id="home">
     <v-app-bar app color="#03002d" dark outlined>
-      <v-app-bar-nav-icon class="hidden-lg-and-up" large @click="TOGGLE_DRAWER(drawer)"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        large
+        @click="TOGGLE_DRAWER(drawer)"
+      ></v-app-bar-nav-icon>
 
-    <div class="mx-auto hidden-md-and-down">
-     <v-btn v-for="item in navItems" :key="item.title" :href="item.href" color="transparent" >
-     {{item.title}}
-     </v-btn>
-    </div>
+      <div class="mx-auto hidden-sm-and-down">
+        <v-btn
+          v-for="item in navItems"
+          :key="item.title"
+          :href="item.href"
+          color="transparent"
+        >
+          {{ item.title }}
+        </v-btn>
+      </div>
       <v-toolbar-title> </v-toolbar-title>
     </v-app-bar>
     <Drawer></Drawer>
- 
   </div>
 </template>
 
 <script>
-import Drawer from '../components/Header-Drawer'
+import Drawer from "../components/Header-Drawer";
 export default {
-  components:{
-   Drawer,
+  components: {
+    Drawer,
   },
   data() {
     return {
       navItems: [
-         { title: "Home", href: "#home" },
+        { title: "Home", href: "#home" },
         { title: "About Me", href: "#about" },
         // { title: "Services", href: "#services" },
         { title: "Experience", href: "#experience" },

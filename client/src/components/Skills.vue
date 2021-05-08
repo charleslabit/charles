@@ -1,11 +1,10 @@
 <template>
   <div class="pa-7" id="skills">
     <v-container>
-
       <h2 class="my-5 text-md-h3 text-sm-h4" style="color: #1565c0">
         WHAT I KNOW?
       </h2>
-    
+
       <v-row justify="space-around">
         <v-col class="col-md-6 col-sm-12">
           <h3 class="text-h5 my-5" style="color: #1565c0">My Skills</h3>
@@ -13,17 +12,16 @@
           <h4 class="text-h6" style="color: #1565c0">Technical Skills</h4>
           <v-row v-for="skill in skillTech" :key="skill.title">
             <v-col cols="4" align-self="center"
-              ><span >
+              ><span>
                 {{ skill.title }}
               </span></v-col
             >
             <v-col cols="8">
               <v-rating
+                half-increments
                 size="25"
+                readonly
                 v-model="skill.rating"
-                full-icon="mdi-record"
-                half-icon="mdi-record"
-                empty-icon="mdi-record"
                 color="#1565c0"
                 background-color="grey darken-3"
               ></v-rating>
@@ -36,10 +34,10 @@
             >
             <v-col cols="8">
               <v-rating
+                half-increments
+                readonly
                 size="25"
                 v-model="skill.rating"
-                full-icon="mdi-record"
-                empty-icon="mdi-record"
                 color="#1565c0"
                 background-color="grey darken-3"
               ></v-rating>
@@ -98,21 +96,25 @@ export default {
     skillTech: [
       { title: "HTML", rating: 3 },
       { title: "CSS", rating: 3 },
-      { title: "JavaScript", rating: 4 },
+      { title: "JavaScript", rating: 3 },
       { title: "Vue.js", rating: 3 },
       { title: "Node.js", rating: 3 },
-      { title: "Magic XPA", rating: 4 },
+      { title: "Magic XPA", rating: 3.5 },
       { title: "Magic XPA RIA", rating: 3 },
     ],
     skillSoft: [
       { title: "Problem Solving", rating: 4 },
       { title: "Sharp Mind", rating: 4 },
-      { title: "Adaptability", rating: 3 },
+      { title: "Adaptability", rating: 3.5 },
+      { title: "Teamwork", rating: 4 },
+      { title: "Ability to accept constructive criticism", rating: 4 },
+      { title: "Approachability", rating: 3.5 },
     ],
     skillDatabase: [
       { title: "MySQL" },
       { title: "MSSQL" },
       { title: "CouchDB" },
+      { title: "Firebase" },
     ],
     skillDetail: [
       { title: "JavaScript", content: "ES5 and ES6" },
@@ -121,15 +123,19 @@ export default {
         content: "VueX, Vue Router, Vuetify",
       },
 
-      { title: "Node.js", content: "Express.js" },
+      { title: "Node.js", content: "Express.js, REST API" },
       {
         title: "Other Javascript libraries",
         content:
-          "Axios, Express.js, Chart.js, Excel.js, Sweetalert2, Moment.js, Knex.js",
+          "Axios, Express.js, Chart.js, Excel.js, Sweetalert2, Moment.js, Knex.js and etc.",
       },
     ],
   }),
 };
 </script>
 
-<style></style>
+<style>
+.v-rating {
+  cursor: context-menu;
+}
+</style>

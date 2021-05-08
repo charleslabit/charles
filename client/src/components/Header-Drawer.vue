@@ -1,4 +1,5 @@
 <template>
+<nav>
   <v-navigation-drawer
     app
     color="#03002d"
@@ -9,7 +10,7 @@
     <a href="#home" style="text-decoration: none">
       <div class="text-center white--text">
         <div class="mt-3">
-          <v-avatar size="150">
+          <v-avatar size="120">
             <img src="../../public/profile.jpg" alt="John" />
           </v-avatar>
         </div>
@@ -17,7 +18,7 @@
           Charles Kenneth C. Labit
         </div>
         <div class="my-2 text-md-h5 text-sm-h6 font-weight-thin">
-          Full Stack Developer
+          Web Developer
         </div>
       </div>
     </a>
@@ -48,6 +49,7 @@
       </v-list>
     </v-row>
   </v-navigation-drawer>
+  </nav>
 </template>
 
 <script>
