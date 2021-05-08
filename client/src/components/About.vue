@@ -5,7 +5,7 @@
         WHO AM I?
       </div>
       <v-row class="text-h6">
-        <v-col class="text-right text-center  " md="4">
+        <v-col class="text-right text-center" md="4" sm="12" cols="12">
           <v-avatar size="150">
             <img src="../../public/profile.jpg" alt="John" />
           </v-avatar>
@@ -17,18 +17,18 @@
             class="mx-4"
             v-clipboard="'charleslabit@gmail.com'"
             @click="copyText()"
-            style="cursor:pointer"
+            style="cursor: pointer"
           >
             📧 charleslabit@gmail.com
           </h6>
 
           <h6 class="mx-4">📱 0947-546-8235</h6>
         </v-col>
-        <v-col md="8" sm="12">
+        <v-col md="8" sm="12" cols="12">
           <p>
-            I am a web developer who have more than 2 years of experience using Vue.js, Vuetify,
-            Node.js, Express.js, REST API and the database that I used are
-            MySQL, MSSQL and CouchDB.
+            I am a web developer who have more than 2 years of experience using
+            Vue.js, Vuetify, Node.js, Express.js, REST API and the database that
+            I used are MySQL, MSSQL and CouchDB.
           </p>
         </v-col>
       </v-row>

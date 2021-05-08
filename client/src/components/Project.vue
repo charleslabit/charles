@@ -103,7 +103,7 @@
                           :href="project.project_url"
                           color="#1565c0"
                           dark
-                          >Click Me</v-btn
+                          >Preview</v-btn
                         >
                       </v-list-item-subtitle>
                     </v-list-item>
@@ -111,7 +111,7 @@
                 </v-col>
               </v-row>
             </v-col>
-            <v-col cols="6" class="pa-5">
+            <v-col cols="6" class="pa-5 hidden-sm-and-down">
               <v-img
                 :src="project.project_image"
                 style="width: 600px; height: 260px ;"
