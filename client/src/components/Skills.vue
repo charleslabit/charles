@@ -1,23 +1,19 @@
 <template>
   <div class="pa-7" id="skills">
     <v-container>
-      <!-- <v-col col-12> -->
-      <!-- <v-row dense no-gutters> -->
-      <!-- <v-col cols="auto"> -->
+
       <h2 class="my-5 text-md-h3 text-sm-h4" style="color: #1565c0">
         WHAT I KNOW?
       </h2>
-      <!-- </v-col> -->
-      <!-- <v-col cols="4"> </v-col> -->
-      <!-- </v-row> -->
-      <!-- </v-col> -->
+    
       <v-row justify="space-around">
         <v-col class="col-md-6 col-sm-12">
           <h3 class="text-h5 my-5" style="color: #1565c0">My Skills</h3>
+
           <h4 class="text-h6" style="color: #1565c0">Technical Skills</h4>
           <v-row v-for="skill in skillTech" :key="skill.title">
             <v-col cols="4" align-self="center"
-              ><span class="body-1 ml-4">
+              ><span >
                 {{ skill.title }}
               </span></v-col
             >

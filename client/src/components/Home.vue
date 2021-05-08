@@ -1,19 +1,21 @@
 <template>
-  <div :style="screenHeight" class="text-center body center-body">
-
-    <v-scale-transition origin="top left">
-      <h2 class="text-sm-h3 font-weight-thin text-md-h2 white--text">
+  <div
+    :style="screenHeight"
+    class="text-center font-weight-thin body center-body "
+  >
+    <div>
+      <h2 class="text-sm-h3  text-md-h2 white--text">
         Charles Kenneth C. Labit
       </h2>
-
-      <h1 class="text-sm-h3 text-md-h2 font-weight-thin white--text">
+      <h1 class="text-sm-h3 text-md-h2  white--text">
         WEB DEVELOPER
       </h1>
-      <p class="text-h6 font-weight-thin hidden-sm-and-down white--text">
+      <p class="text-h6  hidden-sm-and-down white--text">
         If it doesn't scare you, you're probably not dreaming big enough. - Tory
         Burch
       </p>
-    </v-scale-transition>
+     
+    </div>
   </div>
 </template>
 
@@ -56,6 +58,4 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
-
 </style>

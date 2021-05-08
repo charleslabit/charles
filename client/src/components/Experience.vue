@@ -1,6 +1,8 @@
 <template>
   <div id="experience" class="pa-7">
+
     <v-container>
+
       <h2 class="my-5  text-md-h3 text-sm-h4" style="color:#1565c0">
         WHERE I'VE BEEN?
       </h2>

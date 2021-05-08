@@ -40,10 +40,10 @@
         </v-list-item>
       </v-list-item-group>
     </v-list>
-    <v-row dense no-gutters justify="center">
-      <v-list class="col-md-2" v-for="(el, i) in icons" :key="i">
-        <v-list-item :href="el.href">
-          <v-icon color="white">{{ el.icon }}</v-icon>
+    <v-row justify="center">
+      <v-list v-for="(item, i) in icons" :key="i">
+        <v-list-item :href="item.href">
+          <v-icon color="white">{{ item.icon }}</v-icon>
         </v-list-item>
       </v-list>
     </v-row>
