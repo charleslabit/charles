@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio" id="portfolio">
+  <div id="project" class="pa-7">
     <v-container>
       <h2 class="my-5 text-md-h3 text-sm-h4" style="color: #1565c0">
         Sample Projects
@@ -87,7 +87,7 @@
                           class="body-1 hidden-sm-and-down"
                           style="color: #1565c0"
                         >
-                           Preview
+                          Preview
                         </v-list-item-title>
                         <v-list-item-subtitle class="mr-5">
                           <v-btn
@@ -121,7 +121,7 @@
         <v-col> </v-col>
       </v-row>
     </v-container>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -138,7 +138,6 @@ export default {
         project_image: require("../../public/TodoApp.png"),
         project_url: "https://charleslabit-github-io.vercel.app/",
       },
-    
     ],
   }),
 };

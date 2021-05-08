@@ -1,69 +1,37 @@
 <template>
-  <nav>
+  <div id="home">
     <v-app-bar app color="#03002d" dark outlined>
-      <v-app-bar-nav-icon large @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="hidden-lg-and-up" large @click="TOGGLE_DRAWER(drawer)"></v-app-bar-nav-icon>
 
+    <div class="mx-auto hidden-md-and-down">
+     <v-btn v-for="item in navItems" :key="item.title" :href="item.href" color="transparent" >
+     {{item.title}}
+     </v-btn>
+    </div>
       <v-toolbar-title> </v-toolbar-title>
     </v-app-bar>
-    <v-navigation-drawer app color="#03002d" width="280px" v-model="drawer">
-      <a href="#home" style="text-decoration: none">
-        <div class="text-center white--text">
-          <div class="mt-3">
-            <v-avatar size="150">
-              <img src="../../public/profile.jpg" alt="John" />
-            </v-avatar>
-          </div>
-          <div class="my-2 text-md-h4 text-sm-h5 font-weight-thin">
-            Charles Kenneth C. Labit
-          </div>
-          <div class="my-2 text-md-h5 text-sm-h6 font-weight-thin">
-            Full Stack Developer
-          </div>
-        </div>
-      </a>
-      <v-divider color="white"></v-divider>
-      <v-list>
-        <v-list-item-group class="my-4">
-          <v-list-item
-            v-for="(item, i) in navItems"
-            :key="i"
-            :href="item.href"
-            :target="item.target"
-          >
-            <v-list-item-content>
-              <v-list-item-title
-                class="white--text text-center text-md-h6 text-sm-body-1 font-weight-thin"
-              >
-                {{ item.title }}
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-      <v-row dense no-gutters justify="center">
-        <v-list class="col-md-2" v-for="(el, i) in icons" :key="i">
-          <v-list-item :href="el.href">
-            <v-icon color="white">{{ el.icon }}</v-icon>
-          </v-list-item>
-        </v-list>
-      </v-row>
-    </v-navigation-drawer>
-  </nav>
+    <Drawer></Drawer>
+ 
+  </div>
 </template>
 
 <script>
+import Drawer from '../components/Header-Drawer'
 export default {
+  components:{
+   Drawer,
+  },
   data() {
     return {
-      drawer: false,
       navItems: [
+         { title: "Home", href: "#home" },
         { title: "About Me", href: "#about" },
-        { title: "Services", href: "#services" },
+        // { title: "Services", href: "#services" },
         { title: "Experience", href: "#experience" },
         { title: "Skills and Education", href: "#skills" },
-        { title: "Portfolio", href: "#portfolio" },
+        { title: "Project", href: "#project" },
         // { title: "Clients", href: "#clients" },
-        // { title: "Contact", href: "#contact" },
+        { title: "Review", href: "#review" },
       ],
       icons: [
         {
@@ -92,6 +60,3 @@ export default {
 .el__href {
   border-bottom: none !important;
 }
-
-
-</style>

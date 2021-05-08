@@ -6,11 +6,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    userInfo: "",
+    drawer: false,
   },
   mutations: {
-    ADD_INFO: (state, data) => {
-      state.userInfo = data;
+    TOGGLE_DRAWER: (state, data) => {
+      state.drawer = !data;
     },
   },
   plugins: [

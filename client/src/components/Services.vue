@@ -1,5 +1,5 @@
 <template>
-  <section class="services" id="services">
+  <section  id="services">
     <v-container>
       <v-row>
         <v-col md8>
@@ -13,7 +13,7 @@
       </v-row>
       <v-row>
         <v-col class="col-md-8 col-sm-12">
-          <v-expansion-panels popout v-model="panel" multiple>
+          <v-expansion-panels popout multiple>
             <v-expansion-panel v-for="(ability, i) in abilities" :key="i">
               <v-expansion-panel-header class="text-h5 font-weight-light">{{
                 ability.title

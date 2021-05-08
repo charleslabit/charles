@@ -4,18 +4,18 @@ const myPlugin = {
   install(Vue) {
     Vue.mixin({
       data: () => ({
-        api: process.env.VUE_APP_URL,
+
       }),
       created() {},
 
       computed: {
-        ...mapState(["userInfo"]),
+        ...mapState(["drawer"]),
       },
       methods: {
         alert(val) {
           alert(val);
         },
-        ...mapMutations(["ADD_INFO"]),
+        ...mapMutations(["TOGGLE_DRAWER"]),
        
       },
 

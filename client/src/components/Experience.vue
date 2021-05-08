@@ -1,10 +1,7 @@
 <template>
-  <section class="experience" id="experience">
+  <div id="experience" class="pa-7">
     <v-container>
-      <h2
-        class="my-5  text-md-h3 text-sm-h4"
-        style="color:#1565c0"
-      >
+      <h2 class="my-5  text-md-h3 text-sm-h4" style="color:#1565c0">
         WHERE I'VE BEEN?
       </h2>
       <v-row>
@@ -18,10 +15,7 @@
               <span> {{ exp.year }} </span>
             </template>
             <v-card class="elevation-2">
-              <v-card-title
-                style="color:#1565c0"
-                >{{ exp.title }}</v-card-title
-              >
+              <v-card-title style="color:#1565c0">{{ exp.title }}</v-card-title>
               <v-card-text class="text-h6">
                 {{ exp.content }}
               </v-card-text>
@@ -30,7 +24,7 @@
         </v-timeline>
       </v-row>
     </v-container>
-  </section>
+  </div>
 </template>
 
 <script>
@@ -38,28 +32,28 @@ export default {
   name: "Experience",
   data: () => ({
     experience: [
-       {
-        title: "HRD Singapore Pte. Ltd.",
+      {
+        title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as programmer and my roles are to remake the old system into web and also to create a new system that will ease the work load of the employees.",
+          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2021",
       },
       {
-        title: "HRD Singapore Pte. Ltd.",
+        title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as programmer and my roles are to remake the old system into web and also to create a new system that will ease the work load of the employees.",
+          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2020",
       },
       {
-        title: "HRD Singapore Pte. Ltd.",
+        title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as programmer and my roles are to remake the old system into web and also to create a new system that will ease the work load of the employees.",
+          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2019",
       },
       {
-        title: "HRD Singapore Pte. Ltd.",
+        title: "H.R.D. Singapore Pte., Ltd.",
         content:
-          "At HRD Singapore, i was employed as an Office Staff and designated as programmer and my roles are to remake the old system into web and also to create a new system that will ease the work load of the employees.",
+          "At HRD Singapore, i was employed as an Office Staff and designated as a programmer and my roles are to develop and maintain system for production and support department of HRD group of companies. Engaged in orders, import and export, warehouse, inventory, house plan management and Human Resource Information System.",
         year: "2018",
       },
     ],

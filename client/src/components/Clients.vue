@@ -1,5 +1,5 @@
 <template>
-  <section class="clients" id="clients">
+  <section  id="clients">
     <v-container>
       <h2
         class="my-5 font-weight-light text-md-h3 text-sm-h4"

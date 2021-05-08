@@ -1,19 +1,19 @@
 <template>
   <v-app>
-    <v-app-bar app dark>
-      <v-spacer></v-spacer>
-    </v-app-bar>
     <Header></Header>
+
     <v-main>
       <!-- <router-view /> -->
       <Home />
       <About />
-      <Services />
+      <!-- <Services /> -->
       <Experience />
+      <Duties></Duties>
       <Skills />
-      <Portfolio />
+      <Project />
       <!-- <Clients /> -->
-      <!-- <Contact /> -->
+      <Review />
+      <Footer />
     </v-main>
   </v-app>
 </template>
@@ -22,35 +22,37 @@
 import Home from "./components/Home";
 import Header from "./components/Header";
 import About from "./components/About";
-import Services from "./components/Services";
+// import Services from "./components/Services";
+import Duties from './components/Responsibilities'
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
+import Project from "./components/Project";
 // import Clients from "./components/Clients";
-// import Contact from "./components/Contact";
+import Review from "./components/Review";
+import Footer from "./components/Footer"
 export default {
   name: "App",
   components: {
     Header,
     Home,
     About,
-    Services,
+    // Services,
+    Duties,
     Experience,
     Skills,
-    Portfolio,
+    Project,
     // Clients,
-    // Contact,
+    Review,
+    Footer
   },
 
   data: () => ({
     //
   }),
-  created(){
-    this.ADD_INFO('Charles')
-    // this.$store.commit('ADD_INFO','test')
+  created() {
+    this.TOGGLE_DRAWER(true);
   },
-  methods:{
-  }
+  methods: {},
 };
 </script>
 
