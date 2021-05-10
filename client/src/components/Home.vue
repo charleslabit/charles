@@ -3,8 +3,9 @@
     :style="screenHeight"
     class="text-center font-weight-thin body center-body "
   >
-    <div>
-      <h2 class="text-sm-h3  text-md-h2 white--text">
+    <div class="animate__animated animate__fadeInDownBig">
+   
+      <h2 class="text-sm-h3  text-md-h2 white--text ">
         Charles Kenneth C. Labit
       </h2>
       <h1 class="text-sm-h3 text-md-h2  white--text">
@@ -23,7 +24,7 @@
 export default {
   data() {
     return {
-      expand: false,
+      value: true,
     };
   },
   computed: {
@@ -58,4 +59,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
+
+
 </style>

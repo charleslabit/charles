@@ -1,5 +1,5 @@
 <template>
-  <div id="about" class="pa-7">
+  <div id="about" class="pa-7" >
     <v-container>
       <div class="my-5 text-md-h3 text-sm-h4 mx-auto" style="color: #1565c0">
         WHO AM I?
@@ -43,6 +43,8 @@ export default {
   data: () => ({
     //
   }),
+  created(){
+  },
   methods: {
     copyText() {
       Swal.fire({
@@ -54,6 +56,10 @@ export default {
       });
     },
   },
+  computed:{
+
+  },
+ 
 };
 </script>
 
