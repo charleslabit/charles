@@ -6,7 +6,7 @@
       </h2>
 
       <v-row justify="space-around">
-        <v-col class="col-md-6 col-sm-12">
+        <v-col md="6" sm="12" >
           <h3 class="text-h5 my-5" style="color: #1565c0">My Skills</h3>
 
           <h4 class="text-h6" style="color: #1565c0">Technical Skills</h4>

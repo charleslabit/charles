@@ -1,9 +1,9 @@
 <template>
   <div id="about" class="pa-7" >
     <v-container>
-      <div class="my-5 text-md-h3 text-sm-h4 mx-auto" style="color: #1565c0">
+      <h2 class="my-5 text-md-h3 text-sm-h4 mx-auto" style="color: #1565c0">
         WHO AM I?
-      </div>
+      </h2>
       <v-row class="text-h6">
         <v-col class="text-right text-center" md="4" sm="12" cols="12">
           <v-avatar size="150">
