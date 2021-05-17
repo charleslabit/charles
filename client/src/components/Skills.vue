@@ -96,8 +96,8 @@ export default {
     skillTech: [
       { title: "HTML", rating: 3 },
       { title: "CSS", rating: 3 },
-      { title: "JavaScript", rating: 3 },
-      { title: "Vue.js", rating: 3 },
+      { title: "Javascript", rating: 3.5 },
+      { title: "Vue.js", rating: 3.5 },
       { title: "Node.js", rating: 3 },
       { title: "Magic XPA", rating: 3.5 },
       { title: "Magic XPA RIA", rating: 3 },
